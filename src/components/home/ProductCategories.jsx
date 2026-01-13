@@ -33,7 +33,7 @@ export default function ProductCategories() {
 
     return (
         <div id="products" className="w-full lg:h-full">
-            <div className="grid grid-cols-1 lg:grid-cols-4 lg:h-full divide-y lg:divide-y-0 lg:divide-x divide-pewter">
+            <div className="grid grid-cols-1 lg:grid-cols-4 lg:h-full border-l border-pewter divide-y lg:divide-y-0 lg:divide-x divide-pewter">
                 {categories.map((cat) => (
                     <div
                         key={cat.id}

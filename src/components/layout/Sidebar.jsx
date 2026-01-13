@@ -1,26 +1,51 @@
 import Divider from '../ui/Divider'
 import Chip from '../ui/Chip'
 
-export default function Sidebar({ className = '' }) {
+export default function Sidebar({ className = '', isOpen = false, onToggle }) {
     const navItems = [
         { label: '01 / Toneri', sub: 'Kompatibilni', href: '#toneri' },
         { label: '02 / Štampači', sub: 'Laserski', href: '#stampaci' },
         { label: '03 / Vage', sub: 'Digitalne i industrijske', href: '#vage' },
-        { label: '04 / Ventilatori', sub: 'i zavese', href: '#ventilatori' },
+        { label: '04 / Ventilatori', sub: 'zavese', href: '#ventilatori' },
         { label: '05 / Kontakt', sub: 'Lokacije', href: '#kontakt' },
     ]
 
     return (
-        <aside className={`fixed top-0 left-0 hidden h-screen w-72 flex-col justify-between border-r border-pewter bg-obsidian p-8 lg:flex ${className}`}>
+        <aside className={`fixed top-0 left-0 hidden h-screen ${isOpen ? 'w-72' : 'w-20'} flex-col justify-between border-r border-pewter bg-obsidian p-4 lg:p-8 transition-[width] duration-300 lg:flex ${className}`}>
             {/* Top: Logo / Header */}
 
             <div className="flex flex-col gap-4 items-center">
-                <img src="/img/logo-full.png" alt="ATOM SISTEM" className="w-76" />
-                <Chip>UVOZ / IZVOZ / DISTRIBUCIJA</Chip>
+                <div className="w-full flex items-center justify-center">
+                    <button
+                        type="button"
+                        onClick={onToggle}
+                        className="group flex flex-col gap-1.5 p-2 focus:outline-none"
+                        aria-label="Toggle sidebar"
+                        aria-expanded={isOpen}
+                    >
+                        <span
+                            className={`h-px w-8 origin-center bg-vapor transition-all duration-300 group-hover:bg-brandblue
+                                    ${isOpen ? 'translate-y-[4px] rotate-45' : ''
+                                }`}
+                        />
+                        <span
+                            className={`h-px w-8 origin-center bg-vapor transition-all duration-300 group-hover:bg-brandblue
+                                    ${isOpen ? 'w-6 -translate-y-[3px] -rotate-45' : 'w-4 self-end'
+                                }`}
+                        />
+                    </button>
+                </div>
+
+                {isOpen && (
+                    <div className="flex flex-col items-center">
+                        <img src="/img/logo-full.png" alt="ATOM SISTEM" className="w-56" />
+                        <Chip className="mt-4">UVOZ / IZVOZ / DISTRIBUCIJA</Chip>
+                    </div>
+                )}
             </div>
 
             {/* Middle: Navigation */}
-            <nav className="flex flex-col gap-8">
+            <nav className={`flex flex-col gap-8 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                 {navItems.map((item) => (
                     <a
                         key={item.label}
@@ -40,7 +65,7 @@ export default function Sidebar({ className = '' }) {
             </nav>
 
             {/* Bottom: Contact Meta */}
-            <div className="flex flex-col gap-4 text-xs text-steel">
+            <div className={`flex flex-col gap-4 text-xs text-steel transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                 <Divider accent="left" />
                 <div className="flex flex-col gap-1">
                     <p className="text-vapor font-medium">Atom Sistem d.o.o.</p>
