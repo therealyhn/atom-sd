@@ -11,7 +11,7 @@ export default function Sidebar({ className = '' }) {
     ]
 
     return (
-        <aside className={`fixed top-0 left-0 hidden h-screen w-96 flex-col justify-between border-r border-pewter bg-obsidian p-8 lg:flex ${className}`}>
+        <aside className={`fixed top-0 left-0 hidden h-screen w-72 flex-col justify-between border-r border-pewter bg-obsidian p-8 lg:flex ${className}`}>
             {/* Top: Logo / Header */}
 
             <div className="flex flex-col gap-4 items-center">

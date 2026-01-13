@@ -11,7 +11,7 @@ export default function MainLayout({ children }) {
             <MobileNav />
 
             {/* Main Content Area */}
-            <main className="flex-1 min-w-0 lg:ml-96 relative selection:bg-signal-orange selection:text-obsidian">
+            <main className="flex-1 min-w-0 lg:ml-72 relative selection:bg-signal-orange selection:text-obsidian">
                 {children}
             </main>
         </div>
