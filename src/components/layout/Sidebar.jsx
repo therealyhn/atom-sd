@@ -14,13 +14,13 @@ export default function Sidebar({ className = '' }) {
         <aside className={`fixed top-0 left-0 hidden h-screen w-96 flex-col justify-between border-r border-pewter bg-obsidian p-8 lg:flex ${className}`}>
             {/* Top: Logo / Header */}
 
-            <div className="flex flex-col gap-8 items-center">
+            <div className="flex flex-col gap-4 items-center">
                 <img src="/img/logo-full.png" alt="ATOM SISTEM" className="w-76" />
                 <Chip>UVOZ / IZVOZ / DISTRIBUCIJA</Chip>
             </div>
 
             {/* Middle: Navigation */}
-            <nav className="flex flex-col gap-6">
+            <nav className="flex flex-col gap-8">
                 {navItems.map((item) => (
                     <a
                         key={item.label}
@@ -30,7 +30,7 @@ export default function Sidebar({ className = '' }) {
                     >
                         <div className="flex items-center justify-between">
                             <span>{item.label}</span>
-                            <span className="h-px w-0 bg-brandblue transition-all duration-300 group-hover:w-14" />
+                            <span className="h-px w-0 bg-brandblue transition-all duration-300 group-hover:w-14 h-1" />
                         </div>
                         <span className="text-[10px] uppercase tracking-wider text-pewter group-hover:text-steel transition-colors">
                             {item.sub}

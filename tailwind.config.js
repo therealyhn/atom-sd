@@ -9,6 +9,8 @@ export default {
       colors: {
         // Industrial Palette with Expanded Scales
         obsidian: '#fafafaff',
+        heroBlue: '#cde6f7',
+        heroBlueSoft: '#e5f2fb',
         charcoal: {
           DEFAULT: '#888888',
           50: '#f8fafc',
@@ -75,7 +77,7 @@ export default {
         },
         brandblue: {
           DEFAULT: '#0066cc',
-          500: '#0066cc',
+          500: '#007af5ff',
           600: '#0052a3',
           700: '#003d7a',
         },
@@ -114,6 +116,15 @@ export default {
       animation: {
         reveal: 'reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'tick-swipe': 'tick-swipe 0.4s ease-out forwards',
+      },
+      backgroundImage: {
+        'hero-diagonal': 'linear-gradient(-18deg, #139dffff 0 38%, transparent 38%)',
+        'hero-texture': 'linear-gradient(0deg, rgba(229, 242, 251, 0.95), rgba(229, 242, 251, 0.95)), repeating-linear-gradient(0deg, rgba(19, 157, 255, 0.2) 0 1px, transparent 1px 12px), repeating-linear-gradient(90deg, rgba(19, 157, 255, 0.2) 0 1px, transparent 1px 12px)',
+        'hero-grid': 'linear-gradient(to right, rgba(19, 157, 255, 0.18) 1px, transparent 1px), linear-gradient(to bottom, rgba(19, 157, 255, 0.18) 1px, transparent 1px)',
+        'hero-noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
+      },
+      backgroundSize: {
+        'grid-40': '40px 40px',
       },
       spacing: {
         // Consistent grid/spacer units

@@ -1,6 +1,10 @@
-export default function Chip({ children, className = '' }) {
+export default function Chip({ children, className = '', variant = 'pewter' }) {
+    const variantClasses = variant === 'white'
+        ? 'border-white text-white'
+        : 'border-pewter text-steel hover:border-brandblue hover:text-brandblue';
+
     return (
-        <span className={`inline-flex items-center rounded-full border border-pewter px-3 py-1 font-mono text-xs text-steel transition-colors duration-300 hover:border-brandblue hover:text-brandblue ${className}`}>
+        <span className={`inline-flex items-center rounded-full border px-3 py-1 font-mono text-xs transition-colors duration-300 ${variantClasses} ${className}`}>
             {children}
         </span>
     )
