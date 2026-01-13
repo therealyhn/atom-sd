@@ -8,15 +8,15 @@ export default {
     extend: {
       colors: {
         // Industrial Dark Palette
-        obsidian: '#0a0a0a', // Main background
-        charcoal: '#121212', // Surface
-        pewter: '#2a2a2a',   // Borders / Dividers
-        steel: '#888888',    // Muted text
-        vapor: '#e5e5e5',    // Primary text
+        obsidian: '#e5e5e5', // Main background
+        charcoal: '#888888', // Surface
+        pewter: '#0a0a0a',   // Borders / Dividers
+        steel: '#121212',    // Muted text 
+        vapor: '#0a0a0a',    // Primary text 
 
         // Accents
-        'signal-orange': '#ff4d00', // Industrial interaction (ticks, active states)
-        'electric-blue': '#0066cc', // Secondary accent (rare use)
+        brandOrange: '#ff4d00', // Industrial interaction (ticks, active states)
+        brandblue: '#0066cc', // Secondary accent (rare use)
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
