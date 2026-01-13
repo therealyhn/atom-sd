@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         // Industrial Palette with Expanded Scales
-        obsidian: '#e5e5e5',
+        obsidian: '#f1f1f1ff',
         charcoal: {
           DEFAULT: '#888888',
           50: '#f8fafc',

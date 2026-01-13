@@ -3,7 +3,7 @@ import Chip from '../ui/Chip'
 
 export default function Hero() {
     return (
-        <div id="intro" className="h-full w-full flex items-center justify-between px-8 lg:px-16 gap-12 overflow-hidden bg-white/50 relative">
+        <div id="hero" className="w-full lg:h-full flex items-center justify-between px-6 py-12 lg:py-0 lg:px-16 gap-12 overflow-hidden bg-obsidian relative">
             {/* Background Texture/Gradient if needed, keeping simple for now */}
 
             {/* Left Content */}
@@ -30,7 +30,7 @@ export default function Hero() {
                     <Button variant="outline">KONTAKT</Button>
                 </div>
 
-                <div className="mt-8 p-6 bg-pewter-700 border border-brandblue max-w-lg rounded-sm">
+                <div className="mt-8 p-6 border border-brandblue max-w-lg rounded-sm">
                     <p className="text-sm italic text-steel">
                         "Uvek ćemo se truditi da budemo u trendu savremenog poslovanja i da svojim klijentima
                         pružimo što kvalitetniju uslugu radi zadovoljenja njihovih želja i potreba."

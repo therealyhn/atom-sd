@@ -27,12 +27,12 @@ export default function ProductCategories() {
     ]
 
     return (
-        <div id="products" className="h-full w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full divide-y md:divide-y-0 md:divide-x divide-pewter">
+        <div id="products" className="w-full lg:h-full">
+            <div className="grid grid-cols-1 lg:grid-cols-4 lg:h-full divide-y lg:divide-y-0 lg:divide-x divide-pewter">
                 {categories.map((cat) => (
                     <div
                         key={cat.id}
-                        className="group relative bg-obsidian p-6 lg:p-8 flex flex-col justify-between hover:bg-stone-300 transition-colors duration-500 h-full"
+                        className="group relative bg-obsidian p-8 flex flex-col justify-between hover:bg-stone-300 transition-colors duration-500 min-h-[200px] lg:min-h-0 lg:h-full"
                     >
                         {/* Corner Mark */}
                         <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-pewter group-hover:border-brandblue transition-colors" />
