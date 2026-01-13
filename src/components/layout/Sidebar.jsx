@@ -4,9 +4,9 @@ import Chip from '../ui/Chip'
 export default function Sidebar({ className = '' }) {
     const navItems = [
         { label: '01 / Toneri', sub: 'Kompatibilni', href: '#toneri' },
-        { label: '02 / Vage', sub: 'Digitalne', href: '#vage' },
-        { label: '03 / Vazdušne Zavese', sub: 'Industrijske', href: '#zavese' },
-        { label: '04 / Mesoreznice', sub: 'i Mlinovi', href: '#mesoreznice' },
+        { label: '02 / Štampači', sub: 'Laserski', href: '#stampaci' },
+        { label: '03 / Vage', sub: 'Digitalne i industrijske', href: '#vage' },
+        { label: '04 / Ventilatori', sub: 'i zavese', href: '#ventilatori' },
         { label: '05 / Kontakt', sub: 'Lokacije', href: '#kontakt' },
     ]
 

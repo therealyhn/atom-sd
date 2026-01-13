@@ -7,14 +7,14 @@ export default function MobileNav({ className = '' }) {
 
     const navItems = [
         { label: '01 / Toneri', sub: 'Kompatibilni', href: '#toneri' },
-        { label: '02 / Vage', sub: 'Digitalne', href: '#vage' },
-        { label: '03 / Vazdušne Zavese', sub: 'Industrijske', href: '#zavese' },
-        { label: '04 / Mesoreznice', sub: 'i Mlinovi', href: '#mesoreznice' },
+        { label: '02 / Štampači', sub: 'Laserski', href: '#stampaci' },
+        { label: '03 / Vage', sub: 'Digitalne i industrijske', href: '#vage' },
+        { label: '04 / Ventilatori', sub: 'i zavese', href: '#ventilatori' },
         { label: '05 / Kontakt', sub: 'Lokacije', href: '#kontakt' },
     ]
 
     return (
-        <header className={`sticky top-0 z-50 flex items-center justify-between border-b border-pewter bg-obsidian/95 p-4 lg:hidden backdrop-blur-sm ${className}`}>
+        <header className={`sticky top-0 z-50 flex h-full items-center justify-between border-b border-pewter bg-obsidian/95 p-4 lg:hidden backdrop-blur-sm ${className}`}>
             {/* Brand */}
             <div className="flex items-center gap-3">
                 <span className="font-sans font-semibold text-vapor">ATOM SISTEM</span>
@@ -33,7 +33,7 @@ export default function MobileNav({ className = '' }) {
 
             {/* Drawer Overlay */}
             {isOpen && (
-                <div className="fixed inset-0 z-50 flex flex-col bg-obsidian animate-reveal">
+                <div className="fixed inset-0 z-50 bg-obsidian h-screen flex flex-col animate-reveal">
                     <div className="flex items-center justify-between border-b border-pewter p-4">
                         <span className="font-sans font-semibold text-vapor">MENI</span>
                         <button

@@ -7,23 +7,24 @@ export default function ProductCategories() {
             index: '01'
         },
         {
+            id: 'stampaci',
+            title: 'Štampači',
+            desc: 'Profesionalna oprema za obradu mesa.',
+            index: '02'
+        },
+        {
             id: 'vage',
             title: 'Digitalne Vage',
             desc: 'Precizno merenje za industriju i trgovinu.',
-            index: '02'
+            index: '03'
         },
         {
             id: 'zavese',
             title: 'Vazdušne Zavese',
             desc: 'Održavanje klimatizacije i ušteda energije.',
-            index: '03'
-        },
-        {
-            id: 'mesoreznice',
-            title: 'Mesoreznice i Mlinovi',
-            desc: 'Profesionalna oprema za obradu mesa.',
             index: '04'
-        }
+        },
+
     ]
 
     return (

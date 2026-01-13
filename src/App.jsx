@@ -5,12 +5,12 @@ import ProductCategories from './components/sections/ProductCategories'
 function App() {
   return (
     <MainLayout>
-      <div className="flex flex-col h-screen overflow-hidden">
-        <div className="flex-[2] min-h-0 relative">
+      <div className="flex flex-col min-h-screen lg:h-screen lg:overflow-hidden">
+        <div className="relative lg:flex-[2] lg:min-h-0">
           <Hero />
         </div>
 
-        <div className="flex-1 min-h-0 border-t border-pewter bg-pewter/5">
+        <div className="border-t border-pewter bg-pewter/5 lg:flex-1 lg:min-h-0">
           <ProductCategories />
         </div>
       </div>
