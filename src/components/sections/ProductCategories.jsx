@@ -4,25 +4,29 @@ export default function ProductCategories() {
             id: 'toneri',
             title: 'Kompatibilni Toneri',
             desc: 'Za laserske štampače visokog kvaliteta.',
-            index: '01'
+            index: '01',
+            image: '/img/toner.png'
         },
         {
             id: 'stampaci',
             title: 'Štampači',
             desc: 'Profesionalna oprema za obradu mesa.',
-            index: '02'
+            index: '02',
+            image: '/img/printer.png'
         },
         {
             id: 'vage',
             title: 'Digitalne Vage',
             desc: 'Precizno merenje za industriju i trgovinu.',
-            index: '03'
+            index: '03',
+            image: '/img/vaga.png'
         },
         {
             id: 'zavese',
             title: 'Vazdušne Zavese',
             desc: 'Održavanje klimatizacije i ušteda energije.',
-            index: '04'
+            index: '04',
+            image: '/img/zavesa.png'
         },
 
     ]
@@ -33,29 +37,39 @@ export default function ProductCategories() {
                 {categories.map((cat) => (
                     <div
                         key={cat.id}
-                        className="group relative bg-obsidian p-8 flex flex-col justify-between hover:bg-stone-300 transition-colors duration-500 min-h-[200px] lg:min-h-0 lg:h-full"
+                        className="group relative bg-white p-8 flex flex-col justify-between transition-colors duration-500 min-h-[200px] lg:min-h-0 lg:h-full"
                     >
+                        <img
+                            src={cat.image}
+                            alt={cat.title}
+                            className="absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 object-contain grayscale opacity-100 transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0 pointer-events-none sm:h-2/3 sm:w-2/3"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                        <div className="absolute inset-0 bg-obsidian/20 transition-colors duration-500 group-hover:bg-obsidian/25 pointer-events-none" />
                         {/* Corner Mark */}
-                        <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-pewter group-hover:border-brandblue transition-colors" />
+                        <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-pewter group-hover:border-brandblue transition-colors z-10" />
 
-                        {/* Top: Index & Icon */}
-                        <div className="flex justify-between items-start">
-                            <span className="font-mono text-lg text-steel/30 font-bold group-hover:text-brandblue transition-colors">
-                                {cat.index}
-                            </span>
-                            <div className="h-8 w-8 rounded-full border border-pewter flex items-center justify-center group-hover:border-brandblue group-hover:bg-brandblue group-hover:text-obsidian transition-all opacity-0 group-hover:opacity-100">
-                                ↗
+                        <div className="relative z-10 flex flex-col justify-between h-full">
+                            {/* Top: Index & Icon */}
+                            <div className="flex justify-between items-start">
+                                <span className="font-mono text-lg text-steel/30 font-bold group-hover:text-brandblue transition-colors">
+                                    {cat.index}
+                                </span>
+                                <div className="h-8 w-8 rounded-full border border-pewter flex items-center justify-center group-hover:border-brandblue group-hover:bg-brandblue group-hover:text-obsidian transition-all opacity-15 group-hover:opacity-100">
+                                    ↗
+                                </div>
                             </div>
-                        </div>
 
-                        {/* Bottom: Title */}
-                        <div>
-                            <h3 className="text-lg lg:text-xl font-medium text-vapor mb-1 group-hover:translate-x-1 transition-transform">
-                                {cat.title}
-                            </h3>
-                            <p className="text-steel text-[10px] lg:text-xs max-w-xs group-hover:text-steel line-clamp-2">
-                                {cat.desc}
-                            </p>
+                            {/* Bottom: Title */}
+                            <div>
+                                <h3 className="text-lg lg:text-xl font-medium text-vapor mb-1 group-hover:translate-x-1 transition-transform">
+                                    {cat.title}
+                                </h3>
+                                <p className="text-steel text-[10px] lg:text-xs max-w-xs group-hover:text-steel line-clamp-2">
+                                    {cat.desc}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 ))}

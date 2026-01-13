@@ -8,8 +8,6 @@
 {
     body
     {
-        background-color: theme('colors.obsidian');
-        color: theme('colors.vapor');
         font-family: theme('fontFamily.sans');
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -17,7 +15,7 @@
 
     ::selection
     {
-        background-color: theme('colors.signal-orange');
+        background-color: theme('colors.brandblue');
         color: theme('colors.obsidian');
     }
 }

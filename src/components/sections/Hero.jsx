@@ -14,7 +14,7 @@ export default function Hero() {
                     <span className="text-xs font-mono text-steel uppercase tracking-widest">Atom Sistem d.o.o.</span>
                 </div>
 
-                <h1 className="font-sans text-h1 lg:text-display font-medium text-black lg:-ml-1">
+                <h1 className="font-sans text-h2 sm:text-h1 lg:text-display font-medium text-black lg:-ml-1">
                     UVOZ, IZVOZ <br />
                     <span className="text-charcoal">I DISTRIBUCIJA</span>
                 </h1>
@@ -25,16 +25,16 @@ export default function Hero() {
                     vazdušnih zavesa, mesoreznica i mlinova za meso.
                 </p>
 
-                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 mt-4 sm:items-center">
-                    <Button variant="primary">NAŠI PROIZVODI</Button>
-                    <Button variant="outline">KONTAKT</Button>
-                </div>
-
                 <div className="mt-6 sm:mt-8 p-4 sm:p-6 border border-brandblue max-w-lg rounded-sm">
                     <p className="text-sm italic text-steel">
                         "Uvek ćemo se truditi da budemo u trendu savremenog poslovanja i da svojim klijentima
                         pružimo što kvalitetniju uslugu radi zadovoljenja njihovih želja i potreba."
                     </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 mt-4 sm:items-center">
+                    {/* <Button variant="primary">NAŠI PROIZVODI</Button> */}
+                    <Button variant="outline">KONTAKT</Button>
                 </div>
             </div>
 
