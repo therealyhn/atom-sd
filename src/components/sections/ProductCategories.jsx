@@ -27,36 +27,32 @@ export default function ProductCategories() {
     ]
 
     return (
-        <div id="products" className="py-20">
-            <div className="px-6 lg:px-12 flex items-end justify-between mb-12 border-b border-pewter pb-6">
-                <h2 className="text-h2 text-vapor">Kategorije Proizvoda</h2>
-                <span className="hidden md:block text-xs font-mono text-signal-orange">SCROLL TO EXPLORE ↓</span>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-pewter border border-pewter">
+        <div id="products" className="h-full w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full divide-y md:divide-y-0 md:divide-x divide-pewter">
                 {categories.map((cat) => (
                     <div
                         key={cat.id}
-                        className="group relative bg-obsidian p-10 min-h-[300px] flex flex-col justify-between hover:bg-charcoal transition-colors duration-500"
+                        className="group relative bg-obsidian p-6 lg:p-8 flex flex-col justify-between hover:bg-stone-300 transition-colors duration-500 h-full"
                     >
                         {/* Corner Mark */}
-                        <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-pewter group-hover:border-signal-orange transition-colors" />
+                        <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-pewter group-hover:border-brandblue transition-colors" />
 
-                        {/* Content */}
+                        {/* Top: Index & Icon */}
                         <div className="flex justify-between items-start">
-                            <span className="font-mono text-xl text-steel/30 font-bold group-hover:text-signal-orange transition-colors">
+                            <span className="font-mono text-lg text-steel/30 font-bold group-hover:text-brandblue transition-colors">
                                 {cat.index}
                             </span>
-                            <div className="h-8 w-8 rounded-full border border-pewter flex items-center justify-center group-hover:border-signal-orange group-hover:bg-signal-orange group-hover:text-obsidian transition-all">
+                            <div className="h-8 w-8 rounded-full border border-pewter flex items-center justify-center group-hover:border-brandblue group-hover:bg-brandblue group-hover:text-obsidian transition-all opacity-0 group-hover:opacity-100">
                                 ↗
                             </div>
                         </div>
 
+                        {/* Bottom: Title */}
                         <div>
-                            <h3 className="text-2xl font-medium text-vapor mb-2 group-hover:translate-x-2 transition-transform">
+                            <h3 className="text-lg lg:text-xl font-medium text-vapor mb-1 group-hover:translate-x-1 transition-transform">
                                 {cat.title}
                             </h3>
-                            <p className="text-steel text-sm max-w-xs group-hover:text-stone-300">
+                            <p className="text-steel text-[10px] lg:text-xs max-w-xs group-hover:text-steel line-clamp-2">
                                 {cat.desc}
                             </p>
                         </div>

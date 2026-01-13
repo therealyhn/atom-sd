@@ -9,7 +9,7 @@ export default function Button({
     const variants = {
         primary: "bg-brandblue text-obsidian hover:bg-charcoal hover:text-white clip-corner",
         ghost: "text-steel hover:text-brandblue hover:bg-white/5",
-        outline: "border border-pewter text-vapor hover:border-brandblue hover:text-"
+        outline: "border border-pewter text-vapor hover:border-brandblue hover:text-brandblue"
     }
 
     return (

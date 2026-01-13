@@ -28,4 +28,15 @@
     {
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
     }
+
+    .noscroll-hidden::-webkit-scrollbar
+    {
+        display: none;
+    }
+
+    .noscroll-hidden
+    {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
