@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer base
+{
+    body
+    {
+        background-color: theme('colors.obsidian');
+        color: theme('colors.vapor');
+        font-family: theme('fontFamily.sans');
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection
+    {
+        background-color: theme('colors.signal-orange');
+        color: theme('colors.obsidian');
+    }
+}
+
+@layer utilities
+{
+    .clip-corner
+    {
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+    }
+}
