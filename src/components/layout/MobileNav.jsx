@@ -17,7 +17,7 @@ export default function MobileNav({ className = '' }) {
         <header className={`sticky top-0 z-50 flex h-full items-center justify-between border-b border-pewter bg-obsidian/95 p-4 lg:hidden backdrop-blur-sm ${className}`}>
             {/* Brand */}
             <div className="flex items-center gap-3">
-                <span className="font-sans font-semibold text-vapor">ATOM SISTEM</span>
+                <img src="/img/logo-full.png" alt="ATOM SISTEM" className="w-48" />
                 <Chip className="!py-0.5 !text-[10px]">D.O.O.</Chip>
             </div>
 
