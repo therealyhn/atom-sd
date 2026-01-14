@@ -3,7 +3,8 @@ import Chip from '../ui/Chip'
 
 export default function Hero() {
     return (
-        <div id="hero" className="w-full lg:h-full border-l border-pewter flex items-center justify-between px-4 py-8 sm:px-6 sm:py-12 lg:py-0 lg:px-8 gap-8 lg:gap-6 overflow-hidden bg-obsidian bg-no-repeat bg-cover relative">
+        <div id="hero" className="w-full lg:h-full border-l border-pewter flex items-center justify-between px-4 py-8 sm:px-6 sm:py-12 lg:py-0 
+        lg:px-[180px] gap-8 lg:gap-6 overflow-hidden bg-obsidian bg-no-repeat bg-cover relative">
             {/* Background Texture/Gradient if needed, keeping simple for now */}
             <div className="pointer-events-none absolute inset-0 z-0 bg-hero-grid bg-grid-40 opacity-90" />
             <div className="pointer-events-none absolute inset-0 z-0 bg-hero-noise opacity-[0.09]" />
