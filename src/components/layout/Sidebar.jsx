@@ -11,7 +11,7 @@ export default function Sidebar({ className = '', isOpen = false, onToggle }) {
     ]
 
     return (
-        <aside className={`fixed top-0 left-0 hidden h-screen ${isOpen ? 'w-72' : 'w-20'} flex-col justify-between border-r border-pewter bg-obsidian p-4 lg:p-8 transition-[width] duration-300 lg:flex ${className}`}>
+        <aside className={`fixed top-0 left-0 hidden h-screen ${isOpen ? 'w-72 xl:w-80 2xl:w-96' : 'w-20 xl:w-24 2xl:w-28'} flex-col justify-between border-r border-pewter bg-obsidian p-4 lg:p-8 transition-[width] duration-300 lg:flex ${className}`}>
             {/* Top: Logo / Header */}
 
             <div className="flex flex-col gap-4 items-center">
@@ -38,7 +38,7 @@ export default function Sidebar({ className = '', isOpen = false, onToggle }) {
 
                 {isOpen && (
                     <div className="flex flex-col items-center">
-                        <img src="/img/logo-full.png" alt="ATOM SISTEM" className="w-56" />
+                        <img src="/img/logo-full.png" alt="ATOM SISTEM" className="w-44 xl:w-56 2xl:w-64" />
                         <Chip className="mt-4">UVOZ / IZVOZ / DISTRIBUCIJA</Chip>
                     </div>
                 )}

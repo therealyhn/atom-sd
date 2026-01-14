@@ -10,7 +10,7 @@ export default function ProductCategories() {
         {
             id: 'stampaci',
             title: 'Štampači',
-            desc: 'Profesionalna oprema za obradu mesa.',
+            desc: 'Laserski štampači visokog kvaliteta.',
             index: '02',
             image: '/img/printer.png'
         },
@@ -32,18 +32,17 @@ export default function ProductCategories() {
     ]
 
     return (
-        <div id="products" className="w-full lg:h-full">
-            <div className="grid grid-cols-1 lg:grid-cols-4 lg:h-full border-l border-pewter divide-y lg:divide-y-0 lg:divide-x divide-pewter">
+        <div id="products" className="w-full xl:h-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:h-full border-l border-pewter divide-y md:divide-y-0 md:divide-x divide-pewter">
                 {categories.map((cat) => (
                     <div
                         key={cat.id}
-                        className="group relative bg-white p-8 flex flex-col justify-between transition-colors duration-500 min-h-[200px] lg:min-h-0 lg:h-full overflow-hidden"
+                        className="group relative bg-white p-8 flex flex-col justify-between transition-colors duration-500 min-h-48 xl:min-h-0 xl:h-full overflow-hidden"
                     >
                         <img
                             src={cat.image}
                             alt={cat.title}
-                            className="absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 object-contain opacity-100
-                             transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 pointer-events-none sm:h-2/3 sm:w-2/3"
+                            className="absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 object-contain opacity-100 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 pointer-events-none sm:h-2/3 sm:w-2/3"
                             loading="lazy"
                             decoding="async"
                         />
