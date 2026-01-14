@@ -112,10 +112,15 @@ export default {
           '0%': { transform: 'scaleX(0)', transformOrigin: 'left' },
           '100%': { transform: 'scaleX(1)', transformOrigin: 'left' },
         },
+        'promo-fade': {
+          '0%, 20%': { opacity: '1' },
+          '25%, 100%': { opacity: '0' },
+        },
       },
       animation: {
         reveal: 'reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'tick-swipe': 'tick-swipe 0.4s ease-out forwards',
+        'promo-fade': 'promo-fade 12s ease-in-out infinite',
       },
       backgroundImage: {
         'hero-diagonal': 'linear-gradient(-18deg, #139dffff 0 38%, transparent 38%)',

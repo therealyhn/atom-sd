@@ -1,5 +1,6 @@
 import Button from '../ui/Button'
 import Chip from '../ui/Chip'
+import PromoSwiper from '../ui/PromoSwiper'
 
 export default function Hero() {
     return (
@@ -20,9 +21,15 @@ export default function Hero() {
             {/* Left Content */}
             <div className="flex-1 w-full flex flex-col justify-start gap-6 sm:gap-65 lg:justify-center max-w-3xl z-10">
                 <div className="flex flex-wrap items-center gap-3">
-                    <Chip variant="black">EST. 2005</Chip>
-                    <span className="hidden sm:block h-px w-12 bg-black"></span>
-                    <span className="text-xs font-mono text-black uppercase tracking-widest">Atom Sistem d.o.o.</span>
+                    {/* <Chip variant="black">EST. 2005</Chip>
+                    <span className="hidden sm:block h-px w-12 bg-black"></span> */}
+                    <img
+                        src="/img/logo-full.png"
+                        alt="Atom Sistem"
+                        className="h-20 w-auto"
+                        loading="lazy"
+                        decoding="async"
+                    />
                 </div>
 
                 <h1 className="font-sans text-h2 sm:text-h1 lg:text-display font-medium text-black lg:-ml-1">
@@ -49,13 +56,9 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Right Logo */}
-            <div className="hidden lg:flex flex-1 h-full items-center justify-center p-8 hover:opacity-100 duration-700">
-                <img
-                    src="/img/logo.png"
-                    alt="Atom Sistem"
-                    className="max-h-[80%] w-auto object-contain transition-all duration-700 drop-shadow-2xl"
-                />
+            {/* Right Promo */}
+            <div className="hidden lg:flex flex-1 h-full items-center justify-center p-8">
+                <PromoSwiper />
             </div>
         </div>
     )
