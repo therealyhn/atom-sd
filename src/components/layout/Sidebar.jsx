@@ -1,9 +1,10 @@
+import { NavLink } from 'react-router-dom'
 import Divider from '../ui/Divider'
 import Chip from '../ui/Chip'
 
 export default function Sidebar({ className = '', isOpen = false, onToggle }) {
     const navItems = [
-        { label: '01 / Toneri', sub: 'Kompatibilni', href: '#toneri' },
+        { label: '01 / Toneri', sub: 'Kompatibilni', href: '/toneri', isRoute: true },
         { label: '02 / Štampači', sub: 'Laserski', href: '#stampaci' },
         { label: '03 / Vage', sub: 'Digitalne i industrijske', href: '#vage' },
         { label: '04 / Ventilatori', sub: 'zavese', href: '#ventilatori' },
@@ -46,22 +47,39 @@ export default function Sidebar({ className = '', isOpen = false, onToggle }) {
 
             {/* Middle: Navigation */}
             <nav className={`flex flex-col gap-8 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-                {navItems.map((item) => (
-                    <a
-                        key={item.label}
-                        href={item.href}
-                        className="group flex flex-col gap-1 text-lg text-vapor hover:text-brandblue transition-colors duration-300
+                {navItems.map((item) =>
+                    item.isRoute ? (
+                        <NavLink
+                            key={item.label}
+                            to={item.href}
+                            className="group flex flex-col gap-1 text-lg text-vapor hover:text-brandblue transition-colors duration-300
                         border-b border-charcoal"
-                    >
-                        <div className="flex items-center justify-between">
-                            <span>{item.label}</span>
-                            <span className="h-px w-0 bg-brandblue transition-all duration-300 group-hover:w-14 h-1" />
-                        </div>
-                        <span className="text-[10px] uppercase tracking-wider text-pewter group-hover:text-steel transition-colors">
-                            {item.sub}
-                        </span>
-                    </a>
-                ))}
+                        >
+                            <div className="flex items-center justify-between">
+                                <span>{item.label}</span>
+                                <span className="h-px w-0 bg-brandblue transition-all duration-300 group-hover:w-14 h-1" />
+                            </div>
+                            <span className="text-[10px] uppercase tracking-wider text-pewter group-hover:text-steel transition-colors">
+                                {item.sub}
+                            </span>
+                        </NavLink>
+                    ) : (
+                        <a
+                            key={item.label}
+                            href={item.href}
+                            className="group flex flex-col gap-1 text-lg text-vapor hover:text-brandblue transition-colors duration-300
+                        border-b border-charcoal"
+                        >
+                            <div className="flex items-center justify-between">
+                                <span>{item.label}</span>
+                                <span className="h-px w-0 bg-brandblue transition-all duration-300 group-hover:w-14 h-1" />
+                            </div>
+                            <span className="text-[10px] uppercase tracking-wider text-pewter group-hover:text-steel transition-colors">
+                                {item.sub}
+                            </span>
+                        </a>
+                    )
+                )}
             </nav>
 
             {/* Bottom: Contact Meta */}

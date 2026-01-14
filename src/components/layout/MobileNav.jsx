@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import Divider from '../ui/Divider'
 import Chip from '../ui/Chip'
 
@@ -6,7 +7,7 @@ export default function MobileNav({ className = '' }) {
     const [isOpen, setIsOpen] = useState(false)
 
     const navItems = [
-        { label: '01 / Toneri', sub: 'Kompatibilni', href: '#toneri' },
+        { label: '01 / Toneri', sub: 'Kompatibilni', href: '/toneri', isRoute: true },
         { label: '02 / Štampači', sub: 'Laserski', href: '#stampaci' },
         { label: '03 / Vage', sub: 'Digitalne i industrijske', href: '#vage' },
         { label: '04 / Ventilatori', sub: 'i zavese', href: '#ventilatori' },
@@ -45,21 +46,37 @@ export default function MobileNav({ className = '' }) {
                     </div>
 
                     <nav className="flex flex-col p-8 gap-6 overflow-y-auto">
-                        {navItems.map((item) => (
-                            <a
-                                key={item.label}
-                                href={item.href}
-                                onClick={() => setIsOpen(false)}
-                                className="group flex flex-col gap-1"
-                            >
-                                <span className="text-2xl font-light text-vapor group-hover:pl-4 transition-all group-hover:text-signal-orange">
-                                    {item.label}
-                                </span>
-                                <span className="text-xs text-steel uppercase tracking-widest pl-0 group-hover:pl-4 transition-all">
-                                    {item.sub}
-                                </span>
-                            </a>
-                        ))}
+                        {navItems.map((item) =>
+                            item.isRoute ? (
+                                <NavLink
+                                    key={item.label}
+                                    to={item.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className="group flex flex-col gap-1"
+                                >
+                                    <span className="text-2xl font-light text-vapor group-hover:pl-4 transition-all group-hover:text-signal-orange">
+                                        {item.label}
+                                    </span>
+                                    <span className="text-xs text-steel uppercase tracking-widest pl-0 group-hover:pl-4 transition-all">
+                                        {item.sub}
+                                    </span>
+                                </NavLink>
+                            ) : (
+                                <a
+                                    key={item.label}
+                                    href={item.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className="group flex flex-col gap-1"
+                                >
+                                    <span className="text-2xl font-light text-vapor group-hover:pl-4 transition-all group-hover:text-signal-orange">
+                                        {item.label}
+                                    </span>
+                                    <span className="text-xs text-steel uppercase tracking-widest pl-0 group-hover:pl-4 transition-all">
+                                        {item.sub}
+                                    </span>
+                                </a>
+                            )
+                        )}
                     </nav>
 
                     <div className="mt-auto p-8">

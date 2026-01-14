@@ -1,6 +1,6 @@
 import Hero from "../components/home/Hero"
 import ProductCategories from "../components/home/ProductCategories"
-import Footer from "../components/home/Footer"
+// import Footer from "../components/home/Footer"
 
 export default function Home() {
     return (
@@ -14,7 +14,7 @@ export default function Home() {
                     <ProductCategories />
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

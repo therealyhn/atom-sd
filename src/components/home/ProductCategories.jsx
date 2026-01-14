@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function ProductCategories() {
     const categories = [
         {
@@ -34,45 +36,64 @@ export default function ProductCategories() {
     return (
         <div id="products" className="w-full xl:h-full">
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:h-full border-l border-pewter divide-y md:divide-y-0 md:divide-x divide-pewter">
-                {categories.map((cat) => (
-                    <div
-                        key={cat.id}
-                        className="group relative bg-white p-8 flex flex-col justify-between transition-colors duration-500 min-h-48 xl:min-h-0 xl:h-full overflow-hidden"
-                    >
-                        <img
-                            src={cat.image}
-                            alt={cat.title}
-                            className="absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 object-contain opacity-100 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 pointer-events-none sm:h-2/3 sm:w-2/3"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                        <div className="absolute inset-0 bg-obsidian/20 transition-colors duration-500 group-hover:bg-obsidian/25 pointer-events-none" />
-                        {/* Corner Mark */}
-                        <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-pewter group-hover:border-brandblue transition-colors z-10" />
+                {categories.map((cat) => {
+                    const cardClassName = 'group relative bg-white p-8 flex flex-col justify-between transition-colors duration-500 min-h-48 xl:min-h-0 xl:h-full overflow-hidden'
+                    const cardContent = (
+                        <>
+                            <img
+                                src={cat.image}
+                                alt={cat.title}
+                                className="absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 object-contain opacity-100 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 pointer-events-none sm:h-2/3 sm:w-2/3"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div className="absolute inset-0 bg-obsidian/20 transition-colors duration-500 group-hover:bg-obsidian/25 pointer-events-none" />
+                            {/* Corner Mark */}
+                            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-pewter group-hover:border-brandblue transition-colors z-10" />
 
-                        <div className="relative z-10 flex flex-col justify-between h-full">
-                            {/* Top: Index & Icon */}
-                            <div className="flex justify-between items-start">
-                                <span className="font-mono text-lg text-steel/30 font-bold group-hover:text-brandblue transition-colors">
-                                    {cat.index}
-                                </span>
-                                <div className="h-8 w-8 rounded-full border border-pewter flex items-center justify-center group-hover:border-brandblue group-hover:bg-brandblue group-hover:text-obsidian transition-all opacity-15 group-hover:opacity-100">
-                                    ↗
+                            <div className="relative z-10 flex flex-col justify-between h-full">
+                                {/* Top: Index & Icon */}
+                                <div className="flex justify-between items-start">
+                                    <span className="font-mono text-lg text-steel/30 font-bold group-hover:text-brandblue transition-colors">
+                                        {cat.index}
+                                    </span>
+                                    <div className="h-8 w-8 rounded-full border border-pewter flex items-center justify-center group-hover:border-brandblue group-hover:bg-brandblue group-hover:text-obsidian transition-all opacity-15 group-hover:opacity-100">
+                                        ƒÅ-
+                                    </div>
+                                </div>
+
+                                {/* Bottom: Title */}
+                                <div>
+                                    <h3 className="text-lg lg:text-xl font-medium text-vapor mb-1 group-hover:translate-x-1 transition-transform">
+                                        {cat.title}
+                                    </h3>
+                                    <p className="text-steel text-[10px] lg:text-xs max-w-xs group-hover:text-steel line-clamp-2">
+                                        {cat.desc}
+                                    </p>
                                 </div>
                             </div>
+                        </>
+                    )
 
-                            {/* Bottom: Title */}
-                            <div>
-                                <h3 className="text-lg lg:text-xl font-medium text-vapor mb-1 group-hover:translate-x-1 transition-transform">
-                                    {cat.title}
-                                </h3>
-                                <p className="text-steel text-[10px] lg:text-xs max-w-xs group-hover:text-steel line-clamp-2">
-                                    {cat.desc}
-                                </p>
-                            </div>
+                    if (cat.id === 'toneri') {
+                        return (
+                            <Link
+                                key={cat.id}
+                                to="/toneri"
+                                aria-label="Toneri"
+                                className={cardClassName}
+                            >
+                                {cardContent}
+                            </Link>
+                        )
+                    }
+
+                    return (
+                        <div key={cat.id} className={cardClassName}>
+                            {cardContent}
                         </div>
-                    </div>
-                ))}
+                    )
+                })}
             </div>
         </div>
     )
