@@ -18,7 +18,17 @@ export default function TonerCard({ item, onSelect }) {
                         </span>
                     )}
                 </div>
-                <span className="text-xs text-black/40">↗</span>
+                <span className="text-xs text-black/40">ƒÅ-</span>
+            </div>
+
+            <div className="mt-6 flex items-center justify-center border border-black/10 bg-white/70 p-4">
+                <img
+                    src={item.image}
+                    alt={item.imageAlt || item.modelText}
+                    className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                />
             </div>
 
             <p className="mt-6 text-sm text-black/80">

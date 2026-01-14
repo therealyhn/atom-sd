@@ -1,20 +1,7 @@
-import { useEffect } from 'react'
+import useModalControls from '../../hooks/useModalControls'
 
 export default function TonerModal({ item, onClose }) {
-    useEffect(() => {
-        if (!item) return
-        const handleKeyDown = (event) => {
-            if (event.key === 'Escape') onClose()
-        }
-        const { overflow } = document.body.style
-        document.body.style.overflow = 'hidden'
-        window.addEventListener('keydown', handleKeyDown)
-
-        return () => {
-            document.body.style.overflow = overflow
-            window.removeEventListener('keydown', handleKeyDown)
-        }
-    }, [item, onClose])
+    useModalControls(Boolean(item), onClose)
 
     if (!item) return null
 
@@ -46,6 +33,16 @@ export default function TonerModal({ item, onClose }) {
                     >
                         Zatvori
                     </button>
+                </div>
+
+                <div className="mt-6 flex items-center justify-center border border-black/10 bg-white/70 p-6">
+                    <img
+                        src={item.image}
+                        alt={item.imageAlt || item.modelText}
+                        className="h-48 w-auto object-contain"
+                        loading="lazy"
+                        decoding="async"
+                    />
                 </div>
 
                 <p className="mt-6 text-sm text-black/80">

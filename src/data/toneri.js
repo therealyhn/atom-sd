@@ -1,3 +1,6 @@
+const tonerImage = '/img/toner.png'
+const tonerAlt = 'Toner'
+
 export const toneri = [
     {
         id: 'hp-laser-jet-1010-3055mfp-crg-703-fx9-fx10',
@@ -6,6 +9,8 @@ export const toneri = [
             'HP Laser Jet 1010/ 1012/ 1015/ 1018/ 1022/ 1020/ 3015MFP/ 3020MFP/ 3030MFP/ 3050MFP/ 3052MFP/ 3055MFP/ M1005MFP/ Canon CRG-703/ Canon FX9/ FX10',
         code: 'Q2612A',
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
     {
         id: 'hp-laser-jet-p1100-m1217-canon-lbp-6018-crg-725',
@@ -14,6 +19,8 @@ export const toneri = [
             'HP Laser Jet P1100/ P1102/ P1102w/ HP-Laser Jet PRO M1132 / M1210/ M1212NF/ M1214NFH/ M1217/ Canon LBP 6018 Canon CRG-725',
         code: 'CE285A',
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
     {
         id: 'hp-laserjet-pro-m102-m130',
@@ -21,6 +28,8 @@ export const toneri = [
         modelText: 'HP LaserJet Pro M102a/M102w/MFP M130a/M130fw/M130nw',
         code: 'CF217A',
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
     {
         id: 'hp-laser-jet-m203-m227',
@@ -28,6 +37,8 @@ export const toneri = [
         modelText: 'HP Laser Jet M203d/ 203dn/ 203dw/ M227fdn/ 227fdw',
         code: 'CF230A',
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
     {
         id: 'xerox-phaser-3020-workcentre-3025',
@@ -35,6 +46,8 @@ export const toneri = [
         modelText: 'Xerox Phaser 3020e/ Workcentre 3025',
         code: null,
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
     {
         id: 'brother-hl-1110-1818-dcp1510',
@@ -43,6 +56,8 @@ export const toneri = [
             'Brother HL-1110/ 1110E/ 1110R/ 1111/ 1112/ 1112A/ 1112E/ 1112R/ 1118/ 1210WE/ 1212/ DCP1510/ 1510E/ 1510R/ 1511/ 1512/ 1512A/ 1512E/ 1512R/ 1818/',
         code: 'TN-1050',
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
     {
         id: 'hp-laser-jet-m15-m28',
@@ -50,6 +65,8 @@ export const toneri = [
         modelText: 'HP Laser Jet M15a/ M15w/ MFP M28a/ M28w',
         code: 'CF244A',
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
     {
         id: 'samsung-ml-2161-scx3401',
@@ -57,6 +74,8 @@ export const toneri = [
         modelText: 'Samsung ML-2161/ 2162G/ 2166W/ SF761/ 761P/ SCX3401/ 3406HW/ 3405',
         code: 'MLT-D-101S',
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
     {
         id: 'hp-color-laserjet-pro-m254-cf540a',
@@ -64,6 +83,8 @@ export const toneri = [
         modelText: 'HP Color LaserJet Pro M254dw/ M254nw/ MFP M280nw/ MFP M281fdn/ MFP M281fdw',
         code: 'CF540A',
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
     {
         id: 'hp-color-laserjet-pro-m254-cf541a',
@@ -71,6 +92,8 @@ export const toneri = [
         modelText: 'HP Color LaserJet Pro M254dw/ M254nw/ MFP M280nw/ MFP M281fdn/ MFP M281fdw',
         code: 'CF541A',
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
     {
         id: 'hp-color-laserjet-pro-m254-cf542a',
@@ -78,6 +101,8 @@ export const toneri = [
         modelText: 'HP Color LaserJet Pro M254dw/ M254nw/ MFP M280nw/ MFP M281fdn/ MFP M281fdw',
         code: 'CF542A',
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
     {
         id: 'hp-color-laserjet-pro-m254-cf543a',
@@ -85,6 +110,8 @@ export const toneri = [
         modelText: 'HP Color LaserJet Pro M254dw/ M254nw/ MFP M280nw/ MFP M281fdn/ MFP M281fdw',
         code: 'CF543A',
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
     {
         id: 'hp-laser-107-mfp135-137-sa-cipom',
@@ -92,5 +119,7 @@ export const toneri = [
         modelText: 'HP Laser 107/ MFP135a/ag/r/w/wg/ 137fnw/fwg sa cipom',
         code: 'W1106A',
         category: 'Toneri',
+        image: tonerImage,
+        imageAlt: tonerAlt,
     },
 ]

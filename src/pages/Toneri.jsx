@@ -3,7 +3,7 @@ import ToneriHero from '../components/toneri/ToneriHero'
 import ToneriToolbar from '../components/toneri/ToneriToolbar'
 import ToneriGrid from '../components/toneri/ToneriGrid'
 import TonerModal from '../components/toneri/TonerModal'
-import Footer from '../components/home/Footer'
+import Footer from '../components/layout/Footer'
 import { toneri } from '../data/toneri'
 
 export default function Toneri() {

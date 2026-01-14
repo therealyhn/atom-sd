@@ -1,6 +1,6 @@
 export default function ToneriHero() {
     return (
-        <section className="border-l border-pewter bg-obsidian">
+        <section className="bg-obsidian">
             <div className="mx-auto w-full px-6 py-8 sm:px-8 sm:py-12 lg:px-16 xl:px-24">
                 <div className="flex flex-col gap-4">
                     <p className="text-xs font-mono uppercase tracking-widest text-black/70">Katalog</p>
