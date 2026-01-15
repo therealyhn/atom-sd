@@ -40,7 +40,7 @@ export default function Sidebar({ className = '', isOpen = false, onToggle }) {
 
                 {isOpen && (
                     <div className="flex flex-col items-center">
-                        <img src="/img/logo.png" alt="ATOM SISTEM" className="w-20 xl:w-24 2xl:w-28" />
+                        <img src="/img/logo.png" alt="ATOM SISTEM" className="w-16 xl:w-20 2xl:w-24" />
                         <Chip className="mt-4">UVOZ / IZVOZ / DISTRIBUCIJA</Chip>
                     </div>
                 )}
