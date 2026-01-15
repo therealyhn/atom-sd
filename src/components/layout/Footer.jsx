@@ -54,7 +54,7 @@ export default function Footer() {
                 <div className="mt-10 flex items-center justify-between border-t border-black/20 pt-6 text-xs text-black/60">
                     <span>© 2026 Atom Sistem d.o.o.</span>
                     <span>Dizajnirano i izrađano od strane
-                        <a href="https://jovanljusic.com" target="_blank" rel="noopener noreferrer" className="hover:text-brandblue transition-colors"> Jovan Ljušić</a></span>
+                        <a href="https://jovanljusic.com" target="_blank" rel="noopener noreferrer" className="text-brandblue hover:text-pewter transition-colors"> Jovan Ljušić</a></span>
                     <span>All rights reserved.</span>
                 </div>
             </div>

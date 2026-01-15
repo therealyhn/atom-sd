@@ -11,7 +11,7 @@ export default function StampaciHero() {
                         <p className="text-xs font-mono uppercase tracking-widest text-brandblue font-bold">Katalog</p>
                     </div>
                     <h1 className="text-h2 sm:text-h1 xl:text-display font-medium text-black tracking-tight leading-none">
-                        STAMPACI
+                        ŠTAMPACI
                     </h1>
                     <p className="max-w-lg text-body text-steel font-mono text-sm leading-relaxed">
                         // PREGLED ARTIKALA
