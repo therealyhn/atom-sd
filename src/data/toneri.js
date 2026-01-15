@@ -48,7 +48,7 @@ export const toneri = [
         id: 'xerox-phaser-3020-workcentre-3025',
         brand: 'Xerox',
         modelText: 'Xerox Phaser 3020e/ Workcentre 3025',
-        code: null,
+        code: '3020',
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,

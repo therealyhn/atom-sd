@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
     return (
         <footer className="border-t border-pewter bg-obsidian text-black">
@@ -20,8 +22,8 @@ export default function Footer() {
                             <div>
                                 <h4 className="text-xs font-mono uppercase tracking-widest text-black/70">Proizvodi</h4>
                                 <ul className="mt-4 space-y-2 text-sm">
-                                    <li><a href="#toneri" className="hover:text-brandblue transition-colors">Toneri</a></li>
-                                    <li><a href="#stampaci" className="hover:text-brandblue transition-colors">Štampači</a></li>
+                                    <li><Link to="/toneri" className="hover:text-brandblue transition-colors">Toneri</Link></li>
+                                    <li><Link to="/stampaci" className="hover:text-brandblue transition-colors">Štampači</Link></li>
                                     <li><a href="#vage" className="hover:text-brandblue transition-colors">Vage</a></li>
                                     <li><a href="#ventilatori" className="hover:text-brandblue transition-colors">Zavese</a></li>
                                 </ul>

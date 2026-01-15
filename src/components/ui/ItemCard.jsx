@@ -9,12 +9,12 @@ export default function ItemCard({ item, onSelect }) {
             <div className="flex items-start justify-between w-full relative z-10">
                 <div className="flex flex-col gap-2">
                     {item.brand && (
-                        <span className="self-start inline-flex items-center rounded-sm border border-pewter bg-obsidian px-2 py-0.5 font-mono text-[16px] text-steel uppercase tracking-wider group-hover:border-brandblue/30 group-hover:text-brandblue transition-colors">
+                        <span className="self-start inline-flex items-center rounded-sm border border-pewter bg-obsidian px-2 py-0.5 font-mono text-[18px] text-steel uppercase tracking-wider group-hover:border-brandblue/30 group-hover:text-brandblue transition-colors">
                             {item.brand}
                         </span>
                     )}
                     {item.code && (
-                        <span className="font-mono text-xs text-steel group-hover:text-brandblue transition-colors">
+                        <span className="font-mono text-md text-steel group-hover:text-brandblue transition-colors">
                             #{item.code}
                         </span>
                     )}
@@ -47,9 +47,11 @@ export default function ItemCard({ item, onSelect }) {
                     <p className="font-sans text-sm font-medium text-pewter leading-snug line-clamp-2 min-h-[2.5em] group-hover:text-brandblue transition-colors flex-1 pr-4">
                         {item.modelText}
                     </p>
-                    <span className="font-mono text-sm font-bold text-pewter bg-pewter/5 px-2 py-0.5 rounded-sm whitespace-nowrap">
-                        {item.price}
-                    </span>
+                    {item.price && (
+                        <span className="font-mono text-sm font-bold text-pewter bg-pewter/5 px-2 py-0.5 rounded-sm whitespace-nowrap">
+                            {item.price}
+                        </span>
+                    )}
                 </div>
 
                 <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 text-brandblue">

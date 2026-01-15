@@ -1,24 +1,24 @@
 import { useMemo, useState } from 'react'
-import ToneriHero from '../components/toneri/ToneriHero'
+import StampaciHero from '../components/stampaci/StampaciHero'
 import CatalogToolbar from '../components/ui/CatalogToolbar'
 import ItemGrid from '../components/ui/ItemGrid'
 import ItemModal from '../components/ui/ItemModal'
 import Footer from '../components/layout/Footer'
-import { toneri } from '../data/toneri'
+import { stampaci } from '../data/stampaci'
 
-export default function Toneri() {
+export default function Stampaci() {
     const [query, setQuery] = useState('')
     const [activeBrand, setActiveBrand] = useState('Svi')
     const [selectedItem, setSelectedItem] = useState(null)
 
     const brands = useMemo(() => {
-        const unique = Array.from(new Set(toneri.map((item) => item.brand).filter(Boolean)))
+        const unique = Array.from(new Set(stampaci.map((item) => item.brand).filter(Boolean)))
         return ['Svi', ...unique]
     }, [])
 
     const filteredItems = useMemo(() => {
         const normalizedQuery = query.trim().toLowerCase()
-        return toneri.filter((item) => {
+        return stampaci.filter((item) => {
             const matchesBrand = activeBrand === 'Svi' || item.brand === activeBrand
             const matchesQuery =
                 !normalizedQuery ||
@@ -31,7 +31,7 @@ export default function Toneri() {
 
     return (
         <div className="flex flex-col min-h-screen">
-            <ToneriHero />
+            <StampaciHero />
             <CatalogToolbar
                 query={query}
                 onQueryChange={setQuery}
@@ -43,7 +43,7 @@ export default function Toneri() {
                     setActiveBrand('Svi')
                 }}
                 label="Pretraga modela / sifre"
-                searchId="toneri-search"
+                searchId="stampaci-search"
                 placeholder="Unesite termin..."
             />
             <ItemGrid items={filteredItems} onSelect={setSelectedItem} />

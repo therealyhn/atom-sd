@@ -57,21 +57,9 @@ export default function ProductCategories() {
                                     <span className="font-mono text-lg text-steel/30 font-bold group-hover:text-brandblue transition-colors">
                                         {cat.index}
                                     </span>
-                                    <div className="h-8 w-8 rounded-full border border-pewter flex items-center justify-center group-hover:border-brandblue group-hover:bg-brandblue group-hover:text-obsidian transition-all opacity-15 group-hover:opacity-100">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            className="h-4 w-4"
-                                        >
-                                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                                            <polyline points="7 7 17 7 17 17"></polyline>
+                                    <div className="h-6 w-6 text-pewter group-hover:text-brandblue transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                                         </svg>
                                     </div>
                                 </div>
@@ -89,12 +77,18 @@ export default function ProductCategories() {
                         </>
                     )
 
-                    if (cat.id === 'toneri') {
+                    const route = cat.id === 'toneri'
+                        ? '/toneri'
+                        : cat.id === 'stampaci'
+                            ? '/stampaci'
+                            : null
+
+                    if (route) {
                         return (
                             <Link
                                 key={cat.id}
-                                to="/toneri"
-                                aria-label="Toneri"
+                                to={route}
+                                aria-label={cat.title}
                                 className={cardClassName}
                             >
                                 {cardContent}
