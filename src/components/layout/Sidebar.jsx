@@ -4,6 +4,7 @@ import Chip from '../ui/Chip'
 
 export default function Sidebar({ className = '', isOpen = false, onToggle }) {
     const navItems = [
+        { label: '00 / Početna', sub: 'Početna', href: '/', isRoute: true },
         { label: '01 / Toneri', sub: 'Kompatibilni', href: '/toneri', isRoute: true },
         { label: '02 / Štampači', sub: 'Laserski', href: '#stampaci' },
         { label: '03 / Vage', sub: 'Digitalne i industrijske', href: '#vage' },
@@ -39,7 +40,7 @@ export default function Sidebar({ className = '', isOpen = false, onToggle }) {
 
                 {isOpen && (
                     <div className="flex flex-col items-center">
-                        <img src="/img/logo-full.png" alt="ATOM SISTEM" className="w-44 xl:w-56 2xl:w-64" />
+                        <img src="/img/logo.png" alt="ATOM SISTEM" className="w-20 xl:w-24 2xl:w-28" />
                         <Chip className="mt-4">UVOZ / IZVOZ / DISTRIBUCIJA</Chip>
                     </div>
                 )}

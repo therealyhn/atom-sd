@@ -4,7 +4,9 @@ import PromoSwiper from '../ui/PromoSwiper'
 
 export default function Hero() {
     return (
-        <div id="hero" className="w-full xl:h-full border-l border-pewter flex items-center justify-between px-4 py-8 sm:px-8 sm:py-12 xl:py-0 xl:px-16 2xl:px-24 gap-8 md:gap-12 xl:gap-16 overflow-hidden bg-obsidian bg-no-repeat bg-cover relative">
+        <div id="hero" className="w-full xl:h-full border-l border-pewter flex items-center 
+        justify-between px-4 py-8 sm:px-8 sm:py-12 xl:py-0 xl:px-16 2xl:px-24 gap-8 md:gap-12 xl:gap-16 overflow-hidden 
+        bg-obsidian bg-no-repeat bg-cover relative">
             {/* Background Texture/Gradient if needed, keeping simple for now */}
             <div className="pointer-events-none absolute inset-0 z-0 bg-hero-grid bg-grid-40 opacity-90" />
             <div className="pointer-events-none absolute inset-0 z-0 bg-hero-noise opacity-[0.09]" />

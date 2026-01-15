@@ -18,7 +18,23 @@ export default function TonerCard({ item, onSelect }) {
                         </span>
                     )}
                 </div>
-                <span className="text-xs text-black/40">ƒÅ-</span>
+                <div className="h-8 w-8 rounded-full border border-pewter flex items-center justify-center group-hover:border-brandblue group-hover:bg-brandblue group-hover:text-obsidian transition-all opacity-15 group-hover:opacity-100">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-4 w-4"
+                    >
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </div>
             </div>
 
             <div className="mt-6 flex items-center justify-center border border-black/10 bg-white/70 p-4">
