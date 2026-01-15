@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react'
 import ToneriHero from '../components/toneri/ToneriHero'
 import ToneriToolbar from '../components/toneri/ToneriToolbar'
-import ToneriGrid from '../components/toneri/ToneriGrid'
-import TonerModal from '../components/toneri/TonerModal'
+import ItemGrid from '../components/ui/ItemGrid'
+import ItemModal from '../components/ui/ItemModal'
 import Footer from '../components/layout/Footer'
 import { toneri } from '../data/toneri'
 
@@ -43,9 +43,9 @@ export default function Toneri() {
                     setActiveBrand('Svi')
                 }}
             />
-            <ToneriGrid items={filteredItems} onSelect={setSelectedItem} />
+            <ItemGrid items={filteredItems} onSelect={setSelectedItem} />
             <Footer />
-            <TonerModal item={selectedItem} onClose={() => setSelectedItem(null)} />
+            <ItemModal item={selectedItem} onClose={() => setSelectedItem(null)} />
         </div>
     )
 }

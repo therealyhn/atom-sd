@@ -1,4 +1,4 @@
-export default function TonerCard({ item, onSelect }) {
+export default function ItemCard({ item, onSelect }) {
     return (
         <button
             type="button"

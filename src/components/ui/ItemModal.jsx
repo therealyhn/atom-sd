@@ -1,6 +1,6 @@
 import useModalControls from '../../hooks/useModalControls'
 
-export default function TonerModal({ item, onClose }) {
+export default function ItemModal({ item, onClose }) {
     useModalControls(Boolean(item), onClose)
 
     if (!item) return null
