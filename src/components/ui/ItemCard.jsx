@@ -3,53 +3,62 @@ export default function ItemCard({ item, onSelect }) {
         <button
             type="button"
             onClick={() => onSelect(item)}
-            className="group flex h-full w-full flex-col justify-between border border-black/20 bg-white/90 p-6 text-left transition-all duration-300 hover:border-brandblue hover:shadow-glow"
+            className="group flex h-full w-full flex-col justify-between border border-pewter bg-white p-4 text-left transition-all duration-300 hover:border-brandblue hover:translate-y-[-2px] hover:shadow-lg hover:shadow-brandblue/10 rounded-sm relative overflow-hidden"
         >
-            <div className="flex items-center justify-between">
-                <div className="flex flex-wrap gap-2">
+            {/* Top Bar: Badges & Icon */}
+            <div className="flex items-start justify-between w-full relative z-10">
+                <div className="flex flex-col gap-2">
                     {item.brand && (
-                        <span className="inline-flex items-center rounded-full border border-pewter px-3 py-1 font-mono text-xs text-steel">
+                        <span className="self-start inline-flex items-center rounded-sm border border-pewter bg-obsidian px-2 py-0.5 font-mono text-[16px] text-steel uppercase tracking-wider group-hover:border-brandblue/30 group-hover:text-brandblue transition-colors">
                             {item.brand}
                         </span>
                     )}
                     {item.code && (
-                        <span className="inline-flex items-center rounded-full border border-pewter px-3 py-1 font-mono text-xs text-steel">
-                            {item.code}
+                        <span className="font-mono text-xs text-steel group-hover:text-brandblue transition-colors">
+                            #{item.code}
                         </span>
                     )}
                 </div>
-                <div className="h-8 w-8 rounded-full border border-pewter flex items-center justify-center group-hover:border-brandblue group-hover:bg-brandblue group-hover:text-obsidian transition-all opacity-15 group-hover:opacity-100">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-4 w-4"
-                    >
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7 7 17 7 17 17"></polyline>
+
+                <div className="h-6 w-6 text-pewter group-hover:text-brandblue transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                     </svg>
                 </div>
             </div>
 
-            <div className="mt-6 flex items-center justify-center border border-black/10 bg-white/70 p-4">
-                <img
-                    src={item.image}
-                    alt={item.imageAlt || item.modelText}
-                    className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
-                />
+            {/* Image Area */}
+            <div className="mt-8 mb-8 flex items-center justify-center relative z-10">
+                <div className="relative p-6 transition-transform duration-500 group-hover:scale-110">
+                    <div className="absolute inset-0 bg-hero-grid opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full scale-150" />
+                    <img
+                        src={item.image}
+                        alt={item.imageAlt || item.modelText}
+                        className="h-28 w-auto object-contain relative z-10 mix-blend-multiply"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </div>
             </div>
 
-            <p className="mt-6 text-sm text-black/80">
-                {item.modelText}
-            </p>
+            {/* Bottom: Title */}
+            <div className="relative z-10 border-t border-pewter/50 pt-4 group-hover:border-brandblue/30 transition-colors">
+                <div className="flex justify-between items-start mb-2">
+                    <p className="font-sans text-sm font-medium text-pewter leading-snug line-clamp-2 min-h-[2.5em] group-hover:text-brandblue transition-colors flex-1 pr-4">
+                        {item.modelText}
+                    </p>
+                    <span className="font-mono text-sm font-bold text-pewter bg-pewter/5 px-2 py-0.5 rounded-sm whitespace-nowrap">
+                        {item.price}
+                    </span>
+                </div>
+
+                <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 text-brandblue">
+                    <span className="font-mono text-[10px] uppercase tracking-widest">Detaljnije</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-3 w-3">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </div>
+            </div>
         </button>
     )
 }

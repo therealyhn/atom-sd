@@ -11,6 +11,7 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
     {
         id: 'hp-laser-jet-p1100-m1217-canon-lbp-6018-crg-725',
@@ -21,6 +22,7 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
     {
         id: 'hp-laserjet-pro-m102-m130',
@@ -30,6 +32,7 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
     {
         id: 'hp-laser-jet-m203-m227',
@@ -39,6 +42,7 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
     {
         id: 'xerox-phaser-3020-workcentre-3025',
@@ -48,6 +52,7 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
     {
         id: 'brother-hl-1110-1818-dcp1510',
@@ -58,6 +63,7 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
     {
         id: 'hp-laser-jet-m15-m28',
@@ -67,6 +73,7 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
     {
         id: 'samsung-ml-2161-scx3401',
@@ -76,6 +83,7 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
     {
         id: 'hp-color-laserjet-pro-m254-cf540a',
@@ -85,6 +93,7 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
     {
         id: 'hp-color-laserjet-pro-m254-cf541a',
@@ -94,6 +103,7 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
     {
         id: 'hp-color-laserjet-pro-m254-cf542a',
@@ -103,6 +113,7 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
     {
         id: 'hp-color-laserjet-pro-m254-cf543a',
@@ -112,6 +123,7 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
     {
         id: 'hp-laser-107-mfp135-137-sa-cipom',
@@ -121,5 +133,6 @@ export const toneri = [
         category: 'Toneri',
         image: tonerImage,
         imageAlt: tonerAlt,
+        price: '1.250 RSD',
     },
 ]
