@@ -1,4 +1,7 @@
-import useModalControls from '../../hooks/useModalControls'
+import { useRef } from 'react'
+import useEscapeKey from '../../hooks/useEscapeKey'
+import useOutsideClick from '../../hooks/useOutsideClick'
+import useScrollLock from '../../hooks/useScrollLock'
 
 const content = {
     privacy: {
@@ -46,7 +49,11 @@ const content = {
 }
 
 export default function LegalModal({ isOpen, type, onClose }) {
-    useModalControls(isOpen, onClose)
+    const modalRef = useRef(null)
+
+    useEscapeKey(onClose, isOpen)
+    useScrollLock(isOpen)
+    useOutsideClick(modalRef, onClose, isOpen)
 
     if (!isOpen) return null
 
@@ -56,6 +63,7 @@ export default function LegalModal({ isOpen, type, onClose }) {
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-obsidian/90 p-4 backdrop-blur-sm">
             <div className="absolute inset-0" onClick={onClose} />
             <div
+                ref={modalRef}
                 role="dialog"
                 aria-modal="true"
                 className="relative w-full max-w-2xl border border-pewter bg-white shadow-2xl"

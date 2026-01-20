@@ -35,7 +35,7 @@ export default function Footer() {
                             <li><Link to="/toneri" className="block text-black hover:text-brandblue hover:translate-x-2 transition-all">Toneri & Kertridži</Link></li>
                             <li><Link to="/stampaci" className="block text-black hover:text-brandblue hover:translate-x-2 transition-all">Štampači & Oprema</Link></li>
                             <li><a href="#vage" className="block text-black hover:text-brandblue hover:translate-x-2 transition-all">Digitalne Vage</a></li>
-                            <li><a href="#ventilatori" className="block text-black hover:text-brandblue hover:translate-x-2 transition-all">Vazdušne Zavese</a></li>
+                            <li><Link to="/zavese" className="block text-black hover:text-brandblue hover:translate-x-2 transition-all">Vazdušne Zavese</Link></li>
                         </ul>
                         <div className="mt-8 pt-6 border-t border-pewter/10">
                             <a href="#" className="text-xs font-mono uppercase tracking-widest text-pewter group-hover:text-brandblue flex items-center gap-2">

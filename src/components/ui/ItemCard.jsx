@@ -54,18 +54,6 @@ export default function ItemCard({ item, onSelect }) {
                     )}
                 </div>
 
-                {item.fileUrl && (
-                    <a
-                        href={item.fileUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-steel hover:text-brandblue transition-colors"
-                    >
-                        PDF Ponuda
-                        <span className="text-base leading-none">→</span>
-                    </a>
-                )}
-
                 <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 text-brandblue">
                     <span className="font-mono text-[10px] uppercase tracking-widest">Detaljnije</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-3 w-3">

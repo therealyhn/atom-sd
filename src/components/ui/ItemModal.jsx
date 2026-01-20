@@ -1,8 +1,16 @@
-import useModalControls from '../../hooks/useModalControls'
+import { useRef } from 'react'
+import useEscapeKey from '../../hooks/useEscapeKey'
+import useOutsideClick from '../../hooks/useOutsideClick'
+import useScrollLock from '../../hooks/useScrollLock'
 import Button from '../ui/Button'
 
 export default function ItemModal({ item, onClose }) {
-    useModalControls(Boolean(item), onClose)
+    const modalRef = useRef(null)
+    const isOpen = Boolean(item)
+
+    useEscapeKey(onClose, isOpen)
+    useScrollLock(isOpen)
+    useOutsideClick(modalRef, onClose, isOpen)
 
     if (!item) return null
 
@@ -12,6 +20,7 @@ export default function ItemModal({ item, onClose }) {
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-obsidian/60 p-4 backdrop-blur-sm">
             <div
+                ref={modalRef}
                 role="dialog"
                 aria-modal="true"
                 className="w-full max-w-4xl border border-pewter bg-white shadow-2xl flex flex-col md:flex-row overflow-hidden relative"
@@ -88,7 +97,7 @@ export default function ItemModal({ item, onClose }) {
                                     PDF Ponuda
                                 </a>
                             )}
-                            <Button onClick={onClose}>OK</Button>
+                            {/* <Button onClick={onClose}>OK</Button> */}
                         </div>
                     </div>
                 </div>

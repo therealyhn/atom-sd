@@ -150,7 +150,9 @@ export default function ProductCategories() {
                                 ? '/stampaci'
                                 : cat.id === 'vage'
                                     ? '/vage'
-                                : null
+                                    : cat.id === 'zavese'
+                                        ? '/zavese'
+                                    : null
 
                         if (route) {
                             return (
