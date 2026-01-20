@@ -17,9 +17,8 @@ export default function TopNav() {
                 <div className="flex h-20 items-stretch divide-x divide-pewter border-l border-r border-pewter mx-auto max-w-[1920px]">
 
                     {/* Brand / Logo */}
-                    <div className="flex w-64 shrink-0 flex-col justify-center items-left px-8 bg-white">
-                        <img src="/img/logo-full.png" alt="ATOM SISTEM" className="h-12 w-auto self-start" />
-                        <Chip>Distribucija & Servis</Chip>
+                    <div className="flex w-64 shrink-0 flex-col justify-center items-center px-8 bg-white">
+                        <img src="/img/logo-full.png" alt="ATOM SISTEM" className="h-16 w-auto self-center" />
                     </div>
 
                     {/* Navigation Rail */}

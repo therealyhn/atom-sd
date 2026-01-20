@@ -33,8 +33,10 @@ export default function Hero() {
                                         I DISTRIBUCIJA
                                     </span>
                                 </h1>
-                                <p className="text-lg text-steel max-w-lg leading-relaxed border-l-2 border-brandblue pl-6">
-                                    Lider u distribuciji kancelarijskog materijala, industrijske opreme i rešenja za poslovanje.
+                                <p className="text-md text-steel max-w-lg leading-relaxed border-l-2 border-brandblue pl-6">
+                                    Atom Sistem d.o.o. Smederevo je privatno preduzece koje razvija svoje poslovanje u oblasti uvoza,
+                                    izvoza i distribucije kompatibilnih tonera za laserske stampace, digitalnih vaga, vazdusnih zavesa,
+                                    mesorezmica i mlinova za meso.
                                 </p>
                             </div>
 
@@ -46,7 +48,7 @@ export default function Hero() {
                             {/* Actions */}
                             <div className="flex flex-wrap gap-4 mt-4">
                                 <Button variant="primary"><a href="#contact">KONTAKT</a></Button>
-                                <Button variant="outline"><a href="#products">Naši Proizvodi</a></Button>
+                                {/* <Button variant="outline"><a href="#products">Naši Proizvodi</a></Button> */}
                             </div>
                         </div>
                     </div>
