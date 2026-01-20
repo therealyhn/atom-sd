@@ -36,7 +36,7 @@ export default function Hero() {
                             </div>
 
                             <div className="bg-pewter/5 p-6 border-l border-pewter italic text-sm text-steel/80 max-w-md">
-                                "Uvek ŽÎemo se truditi da budemo u trendu savremenog poslovanja i da svojim klijentima pruóimo ­to kvalitetniju uslugu."
+                                "Uvek cemo se truditi da budemo u trendu savremenog poslovanja i da svojim klijentima pruzimo  sto kvalitetniju uslugu radi zadovoljenja njihovih zelja i potreba."
                             </div>
 
                             <div className="flex flex-wrap gap-4 mt-4">

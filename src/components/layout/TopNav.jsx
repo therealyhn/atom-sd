@@ -36,7 +36,7 @@ export default function TopNav() {
                                         </span>
                                         {isActive && <div className="h-1.5 w-1.5 bg-brandblue rounded-full absolute top-4 right-4" />}
                                     </div>
-                                    <span className={`font-sans text-[12px] font-medium uppercase tracking-wider transition-colors ${isActive ? 'text-pewter' : 'text-gray-600 group-hover:text-brandblue'}`}>
+                                    <span className={`font-sans text-[14px] font-medium uppercase tracking-wider transition-colors ${isActive ? 'text-pewter' : 'text-gray-600 group-hover:text-brandblue'}`}>
                                         {item.label}
                                     </span>
                                     <div className={`absolute bottom-0 left-0 h-0.5 w-full bg-brandblue transition-transform duration-300 origin-left ${isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
