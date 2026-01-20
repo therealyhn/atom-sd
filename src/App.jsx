@@ -15,6 +15,7 @@ function App() {
           <Route path="/toneri" element={<Toneri />} />
           <Route path="/stampaci" element={<Stampaci />} />
           <Route path="/vage" element={<Vage />} />
+          <Route path="/vage" element={<Vage />} />
           <Route path="/zavese" element={<Zavese />} />
         </Routes>
       </MainLayout>

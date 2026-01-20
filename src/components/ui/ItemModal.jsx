@@ -75,9 +75,21 @@ export default function ItemModal({ item, onClose }) {
                         )}
                     </div>
 
-                    <div className="mt-8 pt-6 border-t border-pewter/30 flex justify-between items-center">
+                    <div className="mt-8 pt-6 border-t border-pewter/30 flex flex-wrap items-center justify-between gap-4">
                         <span className="font-mono text-xs text-steel">Atom Sistem d.o.o.</span>
-                        <Button onClick={onClose}>OK</Button>
+                        <div className="flex items-center gap-3">
+                            {item.fileUrl && (
+                                <a
+                                    href={item.fileUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="border border-pewter px-5 py-2 text-xs font-mono uppercase tracking-widest text-black hover:border-brandblue hover:text-brandblue transition-colors"
+                                >
+                                    PDF Ponuda
+                                </a>
+                            )}
+                            <Button onClick={onClose}>OK</Button>
+                        </div>
                     </div>
                 </div>
             </div>

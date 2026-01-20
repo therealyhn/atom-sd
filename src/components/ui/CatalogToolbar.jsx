@@ -6,6 +6,9 @@ export default function CatalogToolbar({
     brands,
     activeBrand,
     onBrandChange,
+    categories,
+    activeCategory,
+    onCategoryChange,
     onReset,
     label,
     searchId,
@@ -50,10 +53,38 @@ export default function CatalogToolbar({
                                     </button>
                                 )
                             })}
+                        </div>
+                        {categories && categories.length > 0 && (
+                            <>
+                                <span className="text-[10px] font-mono uppercase tracking-widest text-steel">Filter kategorije</span>
+                                <div className="flex flex-wrap gap-2">
+                                    {categories.map((category) => {
+                                        const isActive = category === activeCategory
+                                        return (
+                                            <button
+                                                key={category}
+                                                type="button"
+                                                onClick={() => onCategoryChange(category)}
+                                                className={`inline-flex items-center rounded-sm border px-4 py-2 font-mono text-xs transition-all duration-300 ${isActive
+                                                    ? 'border-brandblue bg-brandblue text-white'
+                                                    : 'border-pewter bg-white text-steel hover:border-brandblue hover:text-brandblue'
+                                                    }`}
+                                            >
+                                                {category}
+                                            </button>
+                                        )
+                                    })}
+                                    {/* <Button variant="ghost" onClick={onReset} className="h-full px-4 text-xs hover:text-brandblue rounded-sm">
+                                        [ RESET ]
+                                    </Button> */}
+                                </div>
+                            </>
+                        )}
+                        {/* {!categories && (
                             <Button variant="ghost" onClick={onReset} className="h-full px-4 text-xs hover:text-brandblue rounded-sm">
                                 [ RESET ]
                             </Button>
-                        </div>
+                        )} */}
                     </div>
                 </div>
             </div>

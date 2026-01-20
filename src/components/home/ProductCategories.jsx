@@ -148,6 +148,8 @@ export default function ProductCategories() {
                             ? '/toneri'
                             : cat.id === 'stampaci'
                                 ? '/stampaci'
+                                : cat.id === 'vage'
+                                    ? '/vage'
                                 : null
 
                         if (route) {
