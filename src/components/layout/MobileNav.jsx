@@ -7,11 +7,12 @@ export default function MobileNav({ className = '' }) {
     const [isOpen, setIsOpen] = useState(false)
 
     const navItems = [
-        { label: '01 / Toneri', sub: 'Kompatibilni', href: '/toneri', isRoute: true },
-        { label: '02 / Štampači', sub: 'Laserski', href: '/stampaci', isRoute: true },
-        { label: '03 / Vage', sub: 'Digitalne i industrijske', href: '#vage' },
-        { label: '04 / Ventilatori', sub: 'i zavese', href: '#ventilatori' },
-        { label: '05 / Kontakt', sub: 'Lokacije', href: '#kontakt' },
+        { label: '01 / Početna', sub: 'Početna', href: '/', isRoute: true },
+        { label: '02 / Toneri', sub: 'Kompatibilni', href: '/toneri', isRoute: true },
+        { label: '03 / Štampači', sub: 'Laserski', href: '/stampaci', isRoute: true },
+        { label: '04 / Vage', sub: 'Digitalne i industrijske', href: '#vage' },
+        { label: '05 / Ventilatori', sub: 'i zavese', href: '#ventilatori' },
+        { label: '06 / Kontakt', sub: 'Lokacije', href: '#kontakt' },
     ]
 
     return (

@@ -4,7 +4,7 @@ export default function ProductCategories() {
     const categories = [
         {
             id: 'toneri',
-            title: 'Kompatibilni Toneri',
+            title: 'Toneri',
             desc: 'Za laserske štampače visokog kvaliteta.',
             index: '01',
             image: '/img/toner.png'
@@ -34,74 +34,70 @@ export default function ProductCategories() {
     ]
 
     return (
-        <div id="products" className="w-full xl:h-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:h-full border-l border-pewter divide-y md:divide-y-0 md:divide-x divide-pewter">
-                {categories.map((cat) => {
-                    const cardClassName = 'group relative bg-white p-8 flex flex-col justify-between transition-colors duration-500 min-h-48 xl:min-h-0 xl:h-full overflow-hidden'
-                    const cardContent = (
-                        <>
-                            <img
-                                src={cat.image}
-                                alt={cat.title}
-                                className="absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 object-contain opacity-100 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 pointer-events-none sm:h-2/3 sm:w-2/3"
-                                loading="lazy"
-                                decoding="async"
-                            />
-                            <div className="absolute inset-0 bg-obsidian/20 transition-colors duration-500 group-hover:bg-obsidian/25 pointer-events-none" />
-                            {/* Corner Mark */}
-                            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-pewter group-hover:border-brandblue transition-colors z-10" />
+        <div id="products" className="w-full h-full bg-white">
+            <div className="mx-auto w-full h-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 border-l border-r border-pewter divide-y md:divide-y-0 md:divide-x divide-pewter mx-auto max-w-[1920px] h-full">
+                    {categories.map((cat) => {
+                        const cardClassName = 'group relative bg-white p-8 lg:p-12 flex flex-col justify-between transition-all duration-300 min-h-64 xl:min-h-0 xl:h-full overflow-hidden hover:bg-pewter/5 z-0 hover:z-10'
+                        const cardContent = (
+                            <>
+                                {/* Background Image - Bottom Right */}
+                                <img
+                                    src={cat.image}
+                                    alt={cat.title}
+                                    className="absolute right-0 bottom-0 h-48 w-48 object-contain opacity-10 grayscale group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 pointer-events-none"
+                                />
 
-                            <div className="relative z-10 flex flex-col justify-between h-full">
-                                {/* Top: Index & Icon */}
-                                <div className="flex justify-between items-start">
-                                    <span className="font-mono text-lg text-steel/30 font-bold group-hover:text-brandblue transition-colors">
+                                {/* Header */}
+                                <div className="relative z-10 flex justify-between items-center w-full">
+                                    <span className="font-mono text-xl text-pewter/20 font-bold group-hover:text-brandblue transition-colors">
                                         {cat.index}
                                     </span>
-                                    <div className="h-6 w-6 text-pewter group-hover:text-brandblue transition-colors">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                                    <div className="h-6 w-6 text-pewter group-hover:text-brandblue transition-colors opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                         </svg>
                                     </div>
                                 </div>
 
-                                {/* Bottom: Title */}
-                                <div>
-                                    <h3 className="text-lg lg:text-xl font-medium text-vapor mb-1 group-hover:translate-x-1 transition-transform">
+                                {/* Footer Info */}
+                                <div className="relative z-10 mt-auto">
+                                    <h3 className="text-xl lg:text-3xl font-medium text-black mb-2 group-hover:text-brandblue transition-colors tracking-tight">
                                         {cat.title}
                                     </h3>
-                                    <p className="text-steel text-[10px] lg:text-xs max-w-xs group-hover:text-steel line-clamp-2">
+                                    <p className="text-sm text-steel/60 max-w-xs leading-relaxed group-hover:text-black transition-colors">
                                         {cat.desc}
                                     </p>
                                 </div>
-                            </div>
-                        </>
-                    )
-
-                    const route = cat.id === 'toneri'
-                        ? '/toneri'
-                        : cat.id === 'stampaci'
-                            ? '/stampaci'
-                            : null
-
-                    if (route) {
-                        return (
-                            <Link
-                                key={cat.id}
-                                to={route}
-                                aria-label={cat.title}
-                                className={cardClassName}
-                            >
-                                {cardContent}
-                            </Link>
+                            </>
                         )
-                    }
 
-                    return (
-                        <div key={cat.id} className={cardClassName}>
-                            {cardContent}
-                        </div>
-                    )
-                })}
+                        const route = cat.id === 'toneri'
+                            ? '/toneri'
+                            : cat.id === 'stampaci'
+                                ? '/stampaci'
+                                : null
+
+                        if (route) {
+                            return (
+                                <Link
+                                    key={cat.id}
+                                    to={route}
+                                    aria-label={cat.title}
+                                    className={cardClassName}
+                                >
+                                    {cardContent}
+                                </Link>
+                            )
+                        }
+
+                        return (
+                            <div key={cat.id} className={cardClassName}>
+                                {cardContent}
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         </div>
     )
