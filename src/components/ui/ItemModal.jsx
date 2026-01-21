@@ -18,28 +18,28 @@ export default function ItemModal({ item, onClose }) {
     const details = detailLines.join('\n').trim()
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-obsidian/60 p-4 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-obsidian/60 p-2 sm:p-4 backdrop-blur-sm">
             <div
                 ref={modalRef}
                 role="dialog"
                 aria-modal="true"
-                className="w-full max-w-4xl border border-pewter bg-white shadow-2xl flex flex-col md:flex-row overflow-hidden relative"
+                className="w-full max-w-4xl h-[92vh] sm:h-auto sm:max-h-[90vh] border border-pewter bg-white shadow-2xl flex flex-col md:flex-row overflow-y-auto md:overflow-hidden relative"
             >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brandblue to-transparent" />
 
-                <div className="w-full md:w-2/5 bg-white border-r border-pewter p-8 flex items-center justify-center relative">
-                    <div className="absolute top-4 left-4">
+                <div className="w-full md:w-2/5 bg-white border-b md:border-b-0 md:border-r border-pewter p-5 sm:p-8 flex items-center justify-center relative">
+                    <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
                         <span className="font-mono text-[10px] uppercase tracking-widest text-steel/50">Visual Ref</span>
                     </div>
                     <img
                         src={item.image}
                         alt={item.imageAlt || item.modelText}
-                        className="w-full h-auto object-contain mix-blend-multiply max-h-[200px] md:max-h-none"
+                        className="w-full h-auto object-contain mix-blend-multiply max-h-[180px] sm:max-h-[240px] md:max-h-none"
                     />
                 </div>
 
-                <div className="w-full md:w-3/5 p-8 flex flex-col">
-                    <div className="flex justify-between items-start mb-8">
+                <div className="w-full md:w-3/5 p-5 sm:p-8 flex flex-col">
+                    <div className="flex justify-between items-start mb-6 sm:mb-8">
                         <div className="space-y-1">
                             <span className="inline-block px-2 py-0.5 bg-brandblue/10 text-brandblue font-mono text-[10px] uppercase tracking-widest rounded-sm">
                                 Katalog
@@ -54,15 +54,15 @@ export default function ItemModal({ item, onClose }) {
                         </button>
                     </div>
 
-                    <div className="mb-8">
-                        <h2 className="text-2xl md:text-3xl font-bold text-pewter leading-tight mb-2">
+                    <div className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-pewter leading-tight mb-2">
                             {titleLine}
                         </h2>
                         <div className="h-px w-20 bg-brandblue" />
                     </div>
 
                     {details && (
-                        <p className="mb-8 text-sm text-steel whitespace-pre-line">
+                        <p className="mb-6 sm:mb-8 text-sm text-steel whitespace-pre-line">
                             {details}
                         </p>
                     )}
@@ -84,7 +84,7 @@ export default function ItemModal({ item, onClose }) {
                         )}
                     </div>
 
-                    <div className="mt-8 pt-6 border-t border-pewter/30 flex flex-wrap items-center justify-between gap-4">
+                    <div className="mt-6 sm:mt-8 pt-6 border-t border-pewter/30 flex flex-wrap items-center justify-between gap-4">
                         <span className="font-mono text-xs text-steel">Atom Sistem d.o.o.</span>
                         <div className="flex items-center gap-3">
                             {item.fileUrl && (
