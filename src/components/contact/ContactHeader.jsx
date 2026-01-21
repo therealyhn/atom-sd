@@ -1,6 +1,8 @@
 export default function ContactHeader() {
     return (
-        <div className="border-b border-pewter px-6 sm:px-10 lg:px-16 py-10 lg:py-14">
+        <div className="border-b border-pewter px-6 sm:px-10 lg:px-16 py-10 lg:py-14 bg-no-repeat bg-cover relative">
+            <div className="pointer-events-none absolute inset-0 z-0 bg-hero-grid bg-grid-40 opacity-90" />
+            <div className="pointer-events-none absolute inset-0 z-0 bg-hero-noise opacity-[0.09]" />
             <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-widest text-brandblue">
                 <span>06 / Kontakt</span>
                 <span className="h-px w-10 bg-pewter"></span>

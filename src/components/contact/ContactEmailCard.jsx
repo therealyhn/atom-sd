@@ -6,7 +6,7 @@ export default function ContactEmailCard() {
                 Email Podrska
             </h4>
             <a href="mailto:office@atomsd.com" className="text-lg sm:text-xl font-medium text-black hover:text-brandblue transition-colors mb-2 block">
-                office@atomsd.com
+                dejan@atomsd.com
             </a>
             <p className="text-sm text-steel">
                 Za opste upite i informacije.
