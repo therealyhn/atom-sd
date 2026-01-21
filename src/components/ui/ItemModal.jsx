@@ -50,7 +50,7 @@ export default function ItemModal({ item, onClose }) {
                             onClick={onClose}
                             className="group flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-steel hover:text-brandblue transition-colors"
                         >
-                            [ Close ]
+                            [ Zatvori ]
                         </button>
                     </div>
 
