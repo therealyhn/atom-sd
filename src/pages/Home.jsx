@@ -4,7 +4,7 @@ import ProductCategories from '../components/home/ProductCategories'
 export default function Home() {
     return (
         // Mobile: Auto height (scrollable). Desktop (xl): Fixed height (dashboard), no scroll.
-        <div className="flex flex-col min-h-[calc(100vh-5rem)] xl:h-[calc(100vh-5rem)] xl:overflow-hidden">
+        <div className="flex flex-col min-h-[calc(100vh-5rem)] xl:min-h-[calc(100vh-5rem)]">
 
             {/* Vertical Stack: Hero Top, Categories Bottom */}
             <div className="flex-1 flex flex-col">

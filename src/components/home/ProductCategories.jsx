@@ -11,32 +11,31 @@ export default function ProductCategories() {
         {
             id: 'toneri',
             title: 'Toneri',
-            desc: 'Za laserske štampače visokog kvaliteta.',
+            desc: 'Za laserske stampace visokog kvaliteta.',
             index: '01',
-            image: '/img/toner.png'
+            image: '/img/toner.png',
         },
         {
             id: 'stampaci',
-            title: 'Štampači',
-            desc: 'Laserski štampači visokog kvaliteta.',
+            title: 'Stampaci',
+            desc: 'Laserski stampaci visokog kvaliteta.',
             index: '02',
-            image: '/img/printer.png'
+            image: '/img/printer.png',
         },
         {
             id: 'vage',
             title: 'Digitalne Vage',
             desc: 'Precizno merenje za industriju i trgovinu.',
             index: '03',
-            image: '/img/vaga.png'
+            image: '/img/vaga.png',
         },
         {
             id: 'zavese',
-            title: 'Vazdušne Zavese',
-            desc: 'Održavanje klimatizacije i ušteda energije.',
+            title: 'Vazdusne Zavese',
+            desc: 'Odrzavanje klimatizacije i usteda energije.',
             index: '04',
-            image: '/img/zavesa.png'
+            image: '/img/zavesa.png',
         },
-
     ]
 
     return (
@@ -108,19 +107,17 @@ export default function ProductCategories() {
                     <div id={paginationId} className="mt-4 flex items-center justify-center gap-4" />
                 </div>
 
-                <div className="hidden md:grid grid-cols-1 md:grid-cols-2 md:gap-0 md:px-0 md:py-0 xl:grid-cols-4 md:border-l md:border-r md:border-pewter md:divide-y-0 md:divide-x md:divide-pewter mx-auto max-w-[1920px] h-full">
+                <div className="hidden md:grid grid-cols-1 md:grid-cols-2 md:gap-0 md:px-0 md:py-0 xl:grid-cols-4 md:border-l md:border-r md:border-pewter md:divide-y-0 md:divide-x md:divide-pewter mx-auto max-w-[1920px]">
                     {categories.map((cat) => {
-                        const cardClassName = 'group relative bg-white p-6 md:p-8 lg:p-12 flex flex-col justify-between transition-all duration-300 min-h-56 md:min-h-64 xl:min-h-0 xl:h-full overflow-hidden hover:bg-pewter/5 z-0 hover:z-10 border border-pewter md:border-0'
+                        const cardClassName = 'group relative bg-white p-6 md:p-8 lg:p-12 flex flex-col justify-between transition-all duration-300 min-h-56 md:min-h-64 xl:min-h-72 2xl:min-h-80 overflow-hidden hover:bg-pewter/5 z-0 hover:z-10 border border-pewter md:border-0'
                         const cardContent = (
                             <>
-                                {/* Background Image - Bottom Right */}
                                 <img
                                     src={cat.image}
                                     alt={cat.title}
                                     className="absolute right-4 bottom-4 h-32 w-32 object-contain opacity-20 grayscale group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 pointer-events-none md:right-0 md:bottom-0 md:h-48 md:w-48 md:opacity-10"
                                 />
 
-                                {/* Header */}
                                 <div className="relative z-10 flex justify-between items-center w-full">
                                     <span className="font-mono text-xl text-pewter/20 font-bold group-hover:text-brandblue transition-colors">
                                         {cat.index}
@@ -132,7 +129,6 @@ export default function ProductCategories() {
                                     </div>
                                 </div>
 
-                                {/* Footer Info */}
                                 <div className="relative z-10 mt-auto">
                                     <h3 className="text-xl lg:text-3xl font-medium text-black mb-2 group-hover:text-brandblue transition-colors tracking-tight">
                                         {cat.title}
@@ -152,7 +148,7 @@ export default function ProductCategories() {
                                     ? '/vage'
                                     : cat.id === 'zavese'
                                         ? '/zavese'
-                                    : null
+                                        : null
 
                         if (route) {
                             return (
